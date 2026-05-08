@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presentación Gratuita</title>
     
+    <!-- Google tag (gtag.js) - AW-17873578635 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17873578635"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -135,12 +136,14 @@
 <body>
 
     <div class="main-content">
+        <!-- ÁREA DE LA IMAGEN -->
         <div class="image-container">
             <img src="capa-presell.jpg" alt="Presentación Especial">
         </div>
         
         <p class="presentation-text">Haz clic en el botón de abajo para ver la<br>presentación <span class="highlight">¡GRATIS!</span></p>
         
+        <!-- BOTÓN DE LLAMADA A LA ACCIÓN -->
         <a href="/aulaesp.html" class="watch-button" id="ctaButton">
             VER AHORA
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -151,21 +154,24 @@
     
     <footer class="footer">
         <div class="footer-links">
-            <a href="politica-privacidad.html">Privacidad</a>
-            <a href="termos-uso.html">Términos</a>
+            <a href="politica-privacidade.html">Privacidad</a>
+            <a href="termos-uso.html">Términos de Uso</a>
             <a href="aviso-legal.html">Aviso Legal</a>
             <a href="politica-reembolso.html">Reembolso</a>
         </div>
     </footer>
 
+    <!-- SCRIPT PARA MANTENER LOS PARÁMETROS DE LA URL (UTMs) -->
     <script>
         (function() {
             const currentParams = window.location.search;
             if (currentParams) {
                 const ctaButton = document.getElementById('ctaButton');
                 const baseUrl = ctaButton.getAttribute('href');
+                // Añade parámetros al botón principal
                 ctaButton.setAttribute('href', baseUrl + currentParams);
                 
+                // Añade parámetros a los enlaces del pie de página
                 const footerLinks = document.querySelectorAll('.footer-links a');
                 footerLinks.forEach(function(link) {
                     const linkHref = link.getAttribute('href');
